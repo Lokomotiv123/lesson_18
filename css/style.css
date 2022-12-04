@@ -123,6 +123,7 @@ body{
 @media (max-width: 990.98px) { /* Варто вказувати саме такі значення на 0.02 меньше !!!!!! */
 	.actions-header{
 	   gap: 5px;
+		justify-content: end;
 	}
 	.actions-header__button{
 		display: none;
@@ -130,9 +131,6 @@ body{
 	.header__container {
 		gap: 30px;
 		grid-template: 1fr / 130px 1fr minmax(144px, 1fr);
-	}
-	.actions-header{
-		justify-content: end;
 	}
 }
 /* Mobile */
@@ -487,19 +485,19 @@ body{
 	[class*="__container"] {
 		max-width: 320px;
 	}
-	.body-main__title {
+		.body-main__title {
 		font-size: 35px;
-  }
-  .body-main__actions {
-	grid-template: 1fr / 115px 163px;
-	gap: 10px;
-}
+  	}
+  	.body-main__actions {
+		grid-template: 1fr / 115px 163px;
+		gap: 10px;
+	}
 
-.advantages-main {
-	display: grid;
-	justify-items: center;
-	grid-template: 1fr 1fr 1fr 1fr/ 1fr;
-}
+	.advantages-main {
+		display: grid;
+		justify-items: center;
+		grid-template: 1fr 1fr 1fr 1fr/ 1fr;
+	}
 }
 
 
@@ -744,15 +742,12 @@ display: inline-block;
 		gap: 30px;
 	}
 
-	.pic-card {
-		grid-template: 212px / 214px 384px;
-
-	}
 
 	.body-cards__item {
 		margin-right: 0px;
 	}
 	.pic-card {
+		grid-template: 212px / 214px 384px;
 		max-width: 100%;
 	}
 
@@ -767,9 +762,6 @@ display: inline-block;
 	.pic-card{
 		grid-template: 384px 214px / 384px;
 	}
-
-	
-
 	.cards-block__title {
 	   grid-auto-flow: row;
 		grid-template: 1fr 1fr/ 1fr;

@@ -1,0 +1,179 @@
+/* Кнопка */
+
+/* padding було задано розмір кнопки. Це круто!!! */
+
+.button{
+	background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+	border-radius: 4px;
+	font-weight: 700;
+	line-height: 1.25;
+	letter-spacing: 0.5px;
+	padding: 16px 40px;
+	color: #fff;
+	display: inline-block;
+	position: relative;
+}
+
+.button span{
+	z-index: 2;
+	position: relative;
+}
+.button::before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	transition: opacity 0.3s ease 0s;
+	opacity: 0;
+	border-radius: 4px;
+	background: linear-gradient(55.95deg, #ca3530 0%, #c94d05 100%);
+
+}
+.button:hover::before{
+	opacity: 1;
+}
+
+/* Прозора кнопка */
+/* Оскільки кнопка майже однакова робимо її БЕМ модифікатором та
+ додаємо властивості які її відрізняють. Віднімаємо з підінгу розмір бордера*/
+.button--border{
+	background: transparent;
+	padding: 15px 39px;
+	color: #FF3F3A;
+	position: relative;
+	border: 1px solid #FF3F3A;
+	transition: all 0.3s ease 0s;
+}
+
+.button--border:hover{
+	color: #fff;
+	border: 1px solid #FF3F3A;
+	background-color: #FF3F3A;
+
+}
+
+/* заголовки, що повторюються */
+
+.title-block {
+	color: #1E212C;
+	display: inline-grid;
+	gap: 8px;
+}
+.title-block__name {
+	font-weight: 700;
+	line-height: 150%;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	cursor: pointer;
+
+}
+
+.title-block__name:hover{
+	color: #FF3F3A;
+}
+
+.title-block__motivation {
+	font-weight: 900;
+	font-size: 46px;
+	line-height: 130%;
+}
+
+/* картка */
+
+.pic-card {
+	display: inline-grid;
+	grid-template: 212px / 214px 384px;
+	border: 1px solid #E5E8ED;
+	box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+	border-radius: 4px;
+	z-index: 2;
+}
+
+
+.pic-card__image {
+	overflow: hidden;
+	position: relative;
+	padding-right: 35.55%;
+	padding-bottom: 35.55%;
+	height: 100%;
+	border-radius: 4px 0px 0px 4px;
+	z-index: 5;
+}
+.pic-card__image img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 101%;
+	height: 101%;
+	object-fit: contain;
+	transition: all 0.3s ease 0s;
+	
+}
+
+.pic-card__image img:hover{
+	transform: scale(1.05);
+}
+
+.pic-card__body {
+	display: grid;
+	justify-items: start;
+	gap: 20px;
+	padding: 32px 0px 31px 32px;
+}
+
+
+
+.pic-card__button {
+	font-size: 14px;
+	line-height: 150%;
+	color: #FFFFFF;
+	background: #03CEA4;
+	border-radius: 4px;
+	padding: 1px 8px;
+	align-self: start;
+}
+.pic-card__title {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 150%;
+	color: #1E212C;
+}
+
+.pic-card__title span:hover{
+	text-decoration: underline;
+}
+.pic-card__block {
+	display: grid;
+	grid-auto-flow: column;
+	align-items: center;
+	gap: 9px;
+	
+}
+.pic-card__price {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 150%;
+	color: #FF4242;
+}
+.pic-card__who {
+	font-size: 18px;
+	line-height: 150%;
+	color: #787A80;
+	display: grid;
+	grid-auto-flow: column;
+	align-items: center;
+	gap: 8px;
+}
+
+.pic-card__who span:hover{
+	text-decoration: underline;
+}
+.pic-card__who::before{
+	content: "";
+	flex: 0 1 1px;
+	width: 1px;
+	height: 16px;
+	background-color: #787A80;
+}
